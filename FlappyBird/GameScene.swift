@@ -28,7 +28,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     let scoreCategory: UInt32 = 1 << 3
     
     override func didMoveToView(view: SKView) {
-        
         canRestart = false
         
         // setup physics

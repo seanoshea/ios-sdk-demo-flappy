@@ -25,11 +25,25 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
+    
+    func tjcConnectSuccess(notifyObj: NSNotification) {
+        NSLog("Tapjoy connect succeeded")
+    }
+    
+    func tjcConnectFail(notifyObj: NSNotification) {
+        NSLog("Tapjoy connect failed")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+            // TAPJOY
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "tjcConnectSuccess:", name: TJC_CONNECT_SUCCESS, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "tjcConnectFail:", name: TJC_CONNECT_FAILED, object: nil)
+            Tapjoy.connect("tPdB5-ZZSAu6xC_VxPrC0QEBW5ww3pQYyCbXihbJCEYAxh2VOmrGWxaxWqqe",
+                options: [TJC_OPTION_ENABLE_LOGGING: "YES"])
+            
             // Configure the view.
             let skView = self.view as SKView
             skView.showsFPS = true

@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10A27D2E1A7F46AB00FFAD22 /* TapjoyResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 10A27D2C1A7F46AB00FFAD22 /* TapjoyResources.bundle */; };
+		10A27D2F1A7F46AB00FFAD22 /* TapjoyResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 10A27D2C1A7F46AB00FFAD22 /* TapjoyResources.bundle */; };
+		10A27D301A7F46AB00FFAD22 /* Tapjoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D2D1A7F46AB00FFAD22 /* Tapjoy.framework */; };
+		10A27D311A7F46AB00FFAD22 /* Tapjoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D2D1A7F46AB00FFAD22 /* Tapjoy.framework */; };
+		10A27D381A7F515500FFAD22 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D371A7F515500FFAD22 /* AdSupport.framework */; };
+		10A27D3A1A7F516300FFAD22 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D391A7F516300FFAD22 /* CFNetwork.framework */; };
+		10A27D3C1A7F516B00FFAD22 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D3B1A7F516B00FFAD22 /* CoreData.framework */; };
+		10A27D3E1A7F517400FFAD22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D3D1A7F517400FFAD22 /* CoreGraphics.framework */; };
+		10A27D401A7F517C00FFAD22 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D3F1A7F517C00FFAD22 /* CoreLocation.framework */; };
+		10A27D421A7F518A00FFAD22 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D411A7F518A00FFAD22 /* CoreMotion.framework */; };
+		10A27D561A7F51F500FFAD22 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D431A7F51F500FFAD22 /* CoreTelephony.framework */; };
+		10A27D571A7F51F500FFAD22 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D441A7F51F500FFAD22 /* EventKit.framework */; };
+		10A27D581A7F51F500FFAD22 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D451A7F51F500FFAD22 /* EventKitUI.framework */; };
+		10A27D591A7F51F500FFAD22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D461A7F51F500FFAD22 /* Foundation.framework */; };
+		10A27D5A1A7F51F500FFAD22 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D471A7F51F500FFAD22 /* libsqlite3.0.dylib */; };
+		10A27D5B1A7F51F500FFAD22 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D481A7F51F500FFAD22 /* libxml2.dylib */; };
+		10A27D5C1A7F51F500FFAD22 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D491A7F51F500FFAD22 /* libz.dylib */; };
+		10A27D5D1A7F51F500FFAD22 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D4A1A7F51F500FFAD22 /* MapKit.framework */; };
+		10A27D5E1A7F51F500FFAD22 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D4B1A7F51F500FFAD22 /* MediaPlayer.framework */; };
+		10A27D5F1A7F51F500FFAD22 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D4C1A7F51F500FFAD22 /* MessageUI.framework */; };
+		10A27D601A7F51F500FFAD22 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D4D1A7F51F500FFAD22 /* MobileCoreServices.framework */; };
+		10A27D611A7F51F500FFAD22 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D4E1A7F51F500FFAD22 /* PassKit.framework */; };
+		10A27D621A7F51F500FFAD22 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D4F1A7F51F500FFAD22 /* QuartzCore.framework */; };
+		10A27D631A7F51F500FFAD22 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D501A7F51F500FFAD22 /* Security.framework */; };
+		10A27D641A7F51F500FFAD22 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D511A7F51F500FFAD22 /* Social.framework */; };
+		10A27D651A7F51F500FFAD22 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D521A7F51F500FFAD22 /* StoreKit.framework */; };
+		10A27D661A7F51F500FFAD22 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D531A7F51F500FFAD22 /* SystemConfiguration.framework */; };
+		10A27D671A7F51F500FFAD22 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D541A7F51F500FFAD22 /* Twitter.framework */; };
+		10A27D681A7F51F500FFAD22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D551A7F51F500FFAD22 /* UIKit.framework */; };
+		10A27D6A1A7F527A00FFAD22 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A27D691A7F527A00FFAD22 /* libc++.dylib */; };
 		43745200193D163700654986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437451FF193D163700654986 /* AppDelegate.swift */; };
 		43745202193D163700654986 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 43745201193D163700654986 /* GameScene.sks */; };
 		43745204193D163800654986 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43745203193D163800654986 /* GameScene.swift */; };
@@ -28,6 +58,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10A27D2C1A7F46AB00FFAD22 /* TapjoyResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TapjoyResources.bundle; sourceTree = "<group>"; };
+		10A27D2D1A7F46AB00FFAD22 /* Tapjoy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tapjoy.framework; sourceTree = "<group>"; };
+		10A27D321A7F470A00FFAD22 /* FlappyBird-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlappyBird-Bridging-Header.h"; sourceTree = "<group>"; };
+		10A27D331A7F470A00FFAD22 /* FlappyBirdTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlappyBirdTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		10A27D371A7F515500FFAD22 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		10A27D391A7F516300FFAD22 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		10A27D3B1A7F516B00FFAD22 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		10A27D3D1A7F517400FFAD22 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		10A27D3F1A7F517C00FFAD22 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		10A27D411A7F518A00FFAD22 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		10A27D431A7F51F500FFAD22 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		10A27D441A7F51F500FFAD22 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		10A27D451A7F51F500FFAD22 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		10A27D461A7F51F500FFAD22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		10A27D471A7F51F500FFAD22 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		10A27D481A7F51F500FFAD22 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		10A27D491A7F51F500FFAD22 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		10A27D4A1A7F51F500FFAD22 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		10A27D4B1A7F51F500FFAD22 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		10A27D4C1A7F51F500FFAD22 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		10A27D4D1A7F51F500FFAD22 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		10A27D4E1A7F51F500FFAD22 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		10A27D4F1A7F51F500FFAD22 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		10A27D501A7F51F500FFAD22 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		10A27D511A7F51F500FFAD22 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		10A27D521A7F51F500FFAD22 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		10A27D531A7F51F500FFAD22 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		10A27D541A7F51F500FFAD22 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		10A27D551A7F51F500FFAD22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		10A27D691A7F527A00FFAD22 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		437451FA193D163700654986 /* FlappyBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437451FE193D163700654986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437451FF193D163700654986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +107,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A27D6A1A7F527A00FFAD22 /* libc++.dylib in Frameworks */,
+				10A27D561A7F51F500FFAD22 /* CoreTelephony.framework in Frameworks */,
+				10A27D571A7F51F500FFAD22 /* EventKit.framework in Frameworks */,
+				10A27D581A7F51F500FFAD22 /* EventKitUI.framework in Frameworks */,
+				10A27D591A7F51F500FFAD22 /* Foundation.framework in Frameworks */,
+				10A27D5A1A7F51F500FFAD22 /* libsqlite3.0.dylib in Frameworks */,
+				10A27D5B1A7F51F500FFAD22 /* libxml2.dylib in Frameworks */,
+				10A27D5C1A7F51F500FFAD22 /* libz.dylib in Frameworks */,
+				10A27D5D1A7F51F500FFAD22 /* MapKit.framework in Frameworks */,
+				10A27D5E1A7F51F500FFAD22 /* MediaPlayer.framework in Frameworks */,
+				10A27D5F1A7F51F500FFAD22 /* MessageUI.framework in Frameworks */,
+				10A27D601A7F51F500FFAD22 /* MobileCoreServices.framework in Frameworks */,
+				10A27D611A7F51F500FFAD22 /* PassKit.framework in Frameworks */,
+				10A27D621A7F51F500FFAD22 /* QuartzCore.framework in Frameworks */,
+				10A27D631A7F51F500FFAD22 /* Security.framework in Frameworks */,
+				10A27D641A7F51F500FFAD22 /* Social.framework in Frameworks */,
+				10A27D651A7F51F500FFAD22 /* StoreKit.framework in Frameworks */,
+				10A27D661A7F51F500FFAD22 /* SystemConfiguration.framework in Frameworks */,
+				10A27D671A7F51F500FFAD22 /* Twitter.framework in Frameworks */,
+				10A27D681A7F51F500FFAD22 /* UIKit.framework in Frameworks */,
+				10A27D421A7F518A00FFAD22 /* CoreMotion.framework in Frameworks */,
+				10A27D401A7F517C00FFAD22 /* CoreLocation.framework in Frameworks */,
+				10A27D3E1A7F517400FFAD22 /* CoreGraphics.framework in Frameworks */,
+				10A27D3C1A7F516B00FFAD22 /* CoreData.framework in Frameworks */,
+				10A27D3A1A7F516300FFAD22 /* CFNetwork.framework in Frameworks */,
+				10A27D381A7F515500FFAD22 /* AdSupport.framework in Frameworks */,
+				10A27D301A7F46AB00FFAD22 /* Tapjoy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,15 +141,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A27D311A7F46AB00FFAD22 /* Tapjoy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10A27D2A1A7F46AB00FFAD22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10A27D691A7F527A00FFAD22 /* libc++.dylib */,
+				10A27D431A7F51F500FFAD22 /* CoreTelephony.framework */,
+				10A27D441A7F51F500FFAD22 /* EventKit.framework */,
+				10A27D451A7F51F500FFAD22 /* EventKitUI.framework */,
+				10A27D461A7F51F500FFAD22 /* Foundation.framework */,
+				10A27D471A7F51F500FFAD22 /* libsqlite3.0.dylib */,
+				10A27D481A7F51F500FFAD22 /* libxml2.dylib */,
+				10A27D491A7F51F500FFAD22 /* libz.dylib */,
+				10A27D4A1A7F51F500FFAD22 /* MapKit.framework */,
+				10A27D4B1A7F51F500FFAD22 /* MediaPlayer.framework */,
+				10A27D4C1A7F51F500FFAD22 /* MessageUI.framework */,
+				10A27D4D1A7F51F500FFAD22 /* MobileCoreServices.framework */,
+				10A27D4E1A7F51F500FFAD22 /* PassKit.framework */,
+				10A27D4F1A7F51F500FFAD22 /* QuartzCore.framework */,
+				10A27D501A7F51F500FFAD22 /* Security.framework */,
+				10A27D511A7F51F500FFAD22 /* Social.framework */,
+				10A27D521A7F51F500FFAD22 /* StoreKit.framework */,
+				10A27D531A7F51F500FFAD22 /* SystemConfiguration.framework */,
+				10A27D541A7F51F500FFAD22 /* Twitter.framework */,
+				10A27D551A7F51F500FFAD22 /* UIKit.framework */,
+				10A27D411A7F518A00FFAD22 /* CoreMotion.framework */,
+				10A27D3F1A7F517C00FFAD22 /* CoreLocation.framework */,
+				10A27D3D1A7F517400FFAD22 /* CoreGraphics.framework */,
+				10A27D3B1A7F516B00FFAD22 /* CoreData.framework */,
+				10A27D391A7F516300FFAD22 /* CFNetwork.framework */,
+				10A27D371A7F515500FFAD22 /* AdSupport.framework */,
+				10A27D2B1A7F46AB00FFAD22 /* Resources */,
+				10A27D2D1A7F46AB00FFAD22 /* Tapjoy.framework */,
+			);
+			name = Frameworks;
+			path = Libraries/Tapjoy.embeddedframework;
+			sourceTree = "<group>";
+		};
+		10A27D2B1A7F46AB00FFAD22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10A27D2C1A7F46AB00FFAD22 /* TapjoyResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		437451F1193D163700654986 = {
 			isa = PBXGroup;
 			children = (
+				10A27D2A1A7F46AB00FFAD22 /* Frameworks */,
 				437451FC193D163700654986 /* FlappyBird */,
 				43745213193D163800654986 /* FlappyBirdTests */,
 				437451FB193D163700654986 /* Products */,
@@ -89,6 +222,8 @@
 				4374520A193D163800654986 /* Images.xcassets */,
 				437A3DB9193D326A00909BA0 /* bird.atlas */,
 				437451FD193D163700654986 /* Supporting Files */,
+				10A27D321A7F470A00FFAD22 /* FlappyBird-Bridging-Header.h */,
+				10A27D331A7F470A00FFAD22 /* FlappyBirdTests-Bridging-Header.h */,
 			);
 			path = FlappyBird;
 			sourceTree = "<group>";
@@ -198,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A27D2E1A7F46AB00FFAD22 /* TapjoyResources.bundle in Resources */,
 				4374520B193D163800654986 /* Images.xcassets in Resources */,
 				43745202193D163700654986 /* GameScene.sks in Resources */,
 				437A3DBA193D326A00909BA0 /* bird.atlas in Resources */,
@@ -209,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A27D2F1A7F46AB00FFAD22 /* TapjoyResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +476,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/Tapjoy.embeddedframework",
+				);
 				INFOPLIST_FILE = FlappyBird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlappyBird/FlappyBird-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +494,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/Tapjoy.embeddedframework",
+				);
 				INFOPLIST_FILE = FlappyBird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlappyBird/FlappyBird-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -360,9 +510,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlappyBird.app/FlappyBird";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/Tapjoy.embeddedframework",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -372,6 +524,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlappyBird/FlappyBirdTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -380,14 +534,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlappyBird.app/FlappyBird";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/Tapjoy.embeddedframework",
 				);
 				INFOPLIST_FILE = FlappyBirdTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlappyBird/FlappyBirdTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
