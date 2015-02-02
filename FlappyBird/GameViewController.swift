@@ -24,7 +24,7 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, TJPlacementDelegate {
     
     func tjcConnectSuccess(notifyObj: NSNotification) {
         NSLog("Tapjoy connect succeeded")
@@ -38,11 +38,14 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+            scene.vc = self
             // TAPJOY
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "tjcConnectSuccess:", name: TJC_CONNECT_SUCCESS, object: nil)
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "tjcConnectFail:", name: TJC_CONNECT_FAILED, object: nil)
             Tapjoy.connect("tPdB5-ZZSAu6xC_VxPrC0QEBW5ww3pQYyCbXihbJCEYAxh2VOmrGWxaxWqqe",
                 options: [TJC_OPTION_ENABLE_LOGGING: "YES"])
+            Tapjoy.setUserID("inkyu")
+            Tapjoy.setUserLevel(1)
             
             // Configure the view.
             let skView = self.view as SKView

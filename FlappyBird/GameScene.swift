@@ -8,8 +8,10 @@
 
 import SpriteKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate{
+class GameScene: SKScene, SKPhysicsContactDelegate, TJPlacementDelegate {
     let verticalPipeGap = 150.0
+    
+    var vc: GameViewController!
     
     var bird:SKSpriteNode!
     var skyColor:SKColor!
@@ -21,6 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var canRestart = Bool()
     var scoreLabelNode:SKLabelNode!
     var score = NSInteger()
+    var p:TJPlacement!
     
     let birdCategory: UInt32 = 1 << 0
     let worldCategory: UInt32 = 1 << 1
@@ -250,6 +253,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
                 bird.physicsBody?.collisionBitMask = worldCategory
                 bird.runAction(  SKAction.rotateByAngle(CGFloat(M_PI) * CGFloat(bird.position.y) * 0.01, duration:1), completion:{self.bird.speed = 0 })
                 
+                
+                // Restart
+                if(p == nil) {
+                    p = TJPlacement.placementWithName("resetScene", delegate: self) as TJPlacement
+                }
+                p.requestContent()
+                if(p.contentAvailable) {
+                    p.showContentWithViewController(self.vc)
+                }
                 
                 // Flash background if contact is detected
                 self.removeActionForKey("flash")
