@@ -21,8 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Tapjoy.endSession()
     }
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        // Override point for customization after application launch.
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         return true
     }
 
