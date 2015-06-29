@@ -78,25 +78,27 @@ namespace tapjoy {
      * @brief Connects to the Tapjoy Server
      * @param context
      *        a Java object of the application context.
-     * @param apiKey
-     *        Your Tapjoy API Key.
+     * @param sdkKey
+     *        Your Tapjoy SDK Key.
      * @param listener
      *        listener for connect success/failure
      */
-    static bool connect(jobject context, const char* apiKey, TJConnectListener* listener = NULL);
+    static bool connect(jobject context, const char* sdkKey, TJConnectListener* listener = NULL);
 #endif
 
     /**
      * @brief Connects to the Tapjoy Server
-     * @param apiKey
-     *        Your Tapjoy API Key.
+     * @param sdkKey
+     *        Your Tapjoy SDK Key.
      * @param listener
      *        listener for connect success/failure
      */
-    static bool connect(const char* apiKey, TJConnectListener* listener = NULL);
+    static bool connect(const char* sdkKey, TJConnectListener* listener = NULL);
 
     /**
+     * @deprecated Deprecated since version 11.0.0. Tapjoy Offerwall should now be configured through {@link TJPlacement}
      * @brief Show available offers to the user. Data is returned to the callback
+     *        {@link TJOffersListener}
      *
      * @param listener
      *        The class implementing the TapjoyOffersListener callback.
@@ -104,9 +106,11 @@ namespace tapjoy {
     static void showOffers(TJOffersListener* listener);
 
     /**
+     * @deprecated Deprecated since version 11.0.0. Tapjoy Offerwall should now be configured through {@link TJPlacement}
      * @brief Show available offers using a currencyID and currency selector flag. This
      *        should only be used if the application supports multiple currencies and
      *        is NON-MANAGED by Tapjoy. Data is returned to the callback
+     *        {@link TJOffersListener}.
      *
      * @param currencyID
      *        ID of the currency to display.
@@ -314,7 +318,7 @@ namespace tapjoy {
     /**
      * @brief ONLY USE FOR PAID APP INSTALLS.<br>
      *        This method should be called in the onCreate() method of your first
-     *        activity after calling
+     *        activity after calling connect.<br>
      *        Must enable a paid app Pay-Per-Action on the Tapjoy dashboard. Starts a
      *        15 minute timer. After which, will send an actionComplete call with the
      *        paid app PPA to inform the Tapjoy server that the paid install PPA has
@@ -334,12 +338,24 @@ namespace tapjoy {
      */
     static void actionComplete(const char* actionID);
 
+#if defined(ANDROID)
+    /**
+     * @brief Returns true if the push notification is disabled.
+     */
+    static bool isPushNotificationDisabled();
+
+    /**
+     * @brief Sets whether the push notification is disabled.
+     * @param disabled
+     *        true to disable the push notification
+     */
+    static void setPushNotificationDisabled(bool disabled);
+#endif
+
     /**
      * @brief Helper function to check if SDK is initialized
      */
     static bool isConnected();
-
-
   };
 
 #if defined(ANDROID)
@@ -428,8 +444,6 @@ namespace tapjoy {
     virtual void onContentDismiss(TJPlacementHandle placementHandle, const char* placementName) {}
     virtual void onPurchaseRequest(TJPlacementHandle placementHandle, const char* placementName, TJActionRequestHandle requestHandle, const char* requestId, const char* requestToken, const char* productId) {}
     virtual void onRewardRequest(TJPlacementHandle placementHandle, const char* placementName, TJActionRequestHandle requestHandle, const char* requestId, const char* requestToken, const char* itemId, int quantity) {}
-    virtual void onCurrencyRequest(TJPlacementHandle placementHandle, const char* placementName, TJActionRequestHandle requestHandle, const char* requestId, const char* requestToken, const char* currency, int amount) {}
-    virtual void onNavigationRequest(TJPlacementHandle placementHandle, const char* placementName, TJActionRequestHandle requestHandle, const char* requestId, const char* requestToken, const char* location) {}
   };
 
   class TJActionRequest {
@@ -445,11 +459,8 @@ namespace tapjoy {
 #endif
     static TJPlacementHandle create(const char* placementName, TJPlacementListener* listener);
     static void release(TJPlacementHandle placementHandle);
-    static void setAutoPresent(TJPlacementHandle placementHandle, bool shouldAutoPresent);
-    static void setPreload(TJPlacementHandle placementHandle, bool shouldPreload);
     static bool isContentReady(TJPlacementHandle placementHandle);
     static bool isContentAvailable(TJPlacementHandle placementHandle);
-    static bool isPreloadEnabled(TJPlacementHandle placementHandle);
     static void requestContent(TJPlacementHandle placementHandle);
     static void showContent(TJPlacementHandle placementHandle);
   };

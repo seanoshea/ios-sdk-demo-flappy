@@ -102,7 +102,7 @@ typedef enum TJCActionRequestTypeEnum {
  
   - sendPlacementComplete:withContent: Called when an placement is sent successfully
   - sendPlacementFail:error: Called when an error occurs while sending the placement
-  - contentIsReady:Called when content for an placement is successfully preloaded
+  - contentIsReady:Called when content for an placement is successfully cached
   - contentDidAppear: Called when placement content did appear
   - contentDidDisappear: Called when placement content did disappear
   - placement:didRequestAction: Called when an action occurs, such as in-app purchases, and currency or virtual goods rewards
@@ -139,7 +139,7 @@ typedef enum TJCActionRequestTypeEnum {
 - (void)requestDidFail:(TJPlacement*)placement error:(NSError*)error;                       //Unified
 
 /**
- * Called when content for an placement is successfully preloaded
+ * Called when content for an placement is successfully cached
  * @param placement The TJPlacement that was sent
  */
 - (void)contentIsReady:(TJPlacement*)placement;
@@ -177,25 +177,6 @@ typedef enum TJCActionRequestTypeEnum {
 - (void)placement:(TJPlacement*)placement didRequestReward:(TJActionRequest*)request itemId:(NSString*)itemId quantity:(int)quantity;         //Unified
 
 
-/**
- * Callback issued by TJ to publisher when the user has successfully requested for currency
- * @param placement - The TJPlacement that triggered the action request
- * @param request   - The TJActionRequest object
- * @param currency  - The requested currency type
- * @param amount    - The currency amount
- */
-- (void)placement:(TJPlacement*)placement didRequestCurrency:(TJActionRequest*)request currency:(NSString*)currency amount:(int)amount;         //Unified
-
-
-/**
- * Callback issued by TJ to publisher when the user has successfully navigated to the location specified
- * @param placement - The TJPlacement that tirrgered the action request
- * @param request   - The TJActionRequest object
- * @param location  - The location value to where the user has navigated to
- */
-- (void)placement:(TJPlacement*)placement didRequestNavigation:(TJActionRequest*)request location:(NSString*)location;
-
-
 @end
 
 /**
@@ -220,16 +201,10 @@ typedef enum TJCActionRequestTypeEnum {
 @interface TJPlacement : NSObject
 
 /** The TJPlacementDelegate used to handle responses that are received upon sending this placement*/
-@property (nonatomic, retain) id<TJPlacementDelegate> delegate;
+@property (nonatomic, weak) id<TJPlacementDelegate> delegate;
 
 /** The name of the placement */
 @property (nonatomic, copy) NSString *placementName;                                        //Unified
-
-/** Whether content should be shown automatically upon a successful send */
-@property (nonatomic, assign) BOOL presentAutomatically;
-
-/** Whether content should be preloaded when it is received */
-@property (nonatomic, assign) BOOL preload;                                                 //Unified
 
 /** UNIFIED **/
 /** Whether content has been loaded and is ready to be presented */

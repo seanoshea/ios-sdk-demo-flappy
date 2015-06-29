@@ -16,7 +16,7 @@
 #import "TJPlacement.h"
 
 
-#define TJC_DEPRECATION_WARNING(VERSION) __attribute__((deprecated("Go to tech.tapjoy.com for instructions on how to fix this warning")))
+#define TJC_DEPRECATION_WARNING(VERSION) __attribute__((deprecated("Go to dev.tapjoy.com for instructions on how to fix this warning")))
 #define TJ_DEPRECATED_CLASS     __attribute__((deprecated("TapjoyConnect Class is deprecated, use Tapjoy Class")))
 #define TJC_HIGHEST_UNSUPPORTED_SYSTEM_VERISON	@"4.3.5"
 
@@ -39,8 +39,8 @@ typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
  */
 @interface Tapjoy :  NSObject
 
-/** The application API key unique to this app. */
-@property (nonatomic, copy) NSString *apiKey;
+/** The application SDK key unique to this app. */
+@property (nonatomic, copy) NSString *sdkKey;
 
 /** The application ID unique to this app. */
 @property (nonatomic, copy) NSString *appID;
@@ -77,17 +77,17 @@ typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
  *
  * This method should be called upon app delegate initialization in the applicationDidFinishLaunching method.
  *
- * @param apiKey The application API Key. Retrieved from the app dashboard in your Tapjoy account.
+ * @param sdkKey The application SDK Key. Retrieved from the app dashboard in your Tapjoy account.
  * @return n/a
  */
-+ (void)connect:(NSString *)apiKey;
++ (void)connect:(NSString *)sdkKey;
 
 /**
  * This method is called to initialize the Tapjoy system and notify the server that this device is running your application.
  *
  * This method should be called upon app delegate initialization in the applicationDidFinishLaunching method.
  *
- * @param apiKey The application API Key. Retrieved from the app dashboard in your Tapjoy account.
+ * @param sdkKey The application SDK Key. Retrieved from the app dashboard in your Tapjoy account.
  * @param options NSDictionary of special flags to enable non-standard settings. Valid key:value options:
  *
  * TJC_OPTION_ENABLE_LOGGING : BOOL to enable logging
@@ -98,7 +98,7 @@ typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
  *
  * @return n/a
  */
-+ (void)connect:(NSString *)apiKey options:(NSDictionary *)optionsDict;
++ (void)connect:(NSString *)sdkKey options:(NSDictionary *)optionsDict;
 
 /**
  *
@@ -307,17 +307,40 @@ typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
 
 @end
 
-
+/**
+ * The Tapjoy Video Ad Delegate Protocol.
+ */
 @protocol TJCVideoAdDelegate <NSObject>
 
 @optional
 
+/**
+ * Called when a video starts playing.
+ *
+ * @return n/a
+ */
 - (void)videoAdBegan;
 
+/**
+ * Called when a video ad is closed.
+ *
+ * @return n/a
+ */
 - (void)videoAdClosed;
 
+/**
+ * Called when a video has completed playing.
+ *
+ * @return n/a
+ */
 - (void)videoAdCompleted;
 
+/**
+ * Called when a video related error occurs.
+ *
+ * @param errorMsg Error message.
+ * @return n/a
+ */
 - (void)videoAdError:(NSString*)errorMsg;
 
 @end
@@ -372,7 +395,7 @@ typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
  *
  * @return The TJCOffersWebView UIView object.
  */
-+ (UIView*)showOffers;
++ (UIView*)showOffers TJC_DEPRECATION_WARNING(11.0);
 
 /**
  * Allocates and initializes a TJCOffersWebView.
@@ -380,7 +403,7 @@ typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
  * @param vController The UIViewController to set as TJCOffersWebView's parentVController_.
  * @return n/a
  */
-+ (void)showOffersWithViewController:(UIViewController*)vController;
++ (void)showOffersWithViewController:(UIViewController*)vController TJC_DEPRECATION_WARNING(11.0);
 
 /**
  * Allocates and initializes a TJCOffersWebView. This is only used when multiple currencies are enabled.
@@ -389,7 +412,7 @@ typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
  * @param isSelectorVisible Specifies whether to display the currency selector in the offer wall.
  * @return The TJCOffersWebView UIView object.
  */
-+ (UIView*)showOffersWithCurrencyID:(NSString*)currencyID withCurrencySelector:(BOOL)isSelectorVisible;
++ (UIView*)showOffersWithCurrencyID:(NSString*)currencyID withCurrencySelector:(BOOL)isSelectorVisible TJC_DEPRECATION_WARNING(11.0);
 
 /**
  * Allocates and initializes a TJCOffersWebView. This is only used when multiple currencies are enabled.
@@ -399,7 +422,7 @@ typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
  * @param isSelectorVisible Specifies whether to display the currency selector in the offer wall.
  * @return n/a
  */
-+ (void)showOffersWithCurrencyID:(NSString*)currencyID withViewController:(UIViewController*)vController withCurrencySelector:(BOOL)isSelectorVisible;
++ (void)showOffersWithCurrencyID:(NSString*)currencyID withViewController:(UIViewController*)vController withCurrencySelector:(BOOL)isSelectorVisible TJC_DEPRECATION_WARNING(11.0);
 
 @end
 
@@ -467,7 +490,7 @@ typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
 @end
 
 
-@interface Tapjoy (TJCVideoViewHandler)
+@interface Tapjoy (TJCVideoManager)
 
 /**
  * Sets the class that implements the TJCVideoAdDelegate protocol.
