@@ -1,0 +1,5 @@
+coverage_service: coveralls
+xcodeproj: FlappyBird.xcodeproj
+source_directory: FlappyBird
+ignore:
+  - FlappyBirdTests/*
