@@ -1,0 +1,7 @@
+[
+  "-project", "FlappyBird.xcodeproj",
+  "-scheme", "FlappyBird",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-arch", "i386"
+]
