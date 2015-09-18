@@ -14,7 +14,7 @@ extension SKNode {
         
         let path = NSBundle.mainBundle().pathForResource(file as String, ofType: "sks")
         
-        let sceneData = NSData(contentsOfFile: path!, options: .DataReadingMappedIfSafe, error: nil)
+        let sceneData = try? NSData(contentsOfFile: path!, options: .DataReadingMappedIfSafe)
         let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData!)
         
         archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
@@ -66,11 +66,11 @@ class GameViewController: UIViewController, TJPlacementDelegate {
         return true
     }
 
-    override func supportedInterfaceOrientations() -> Int {
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
+            return UIInterfaceOrientationMask.AllButUpsideDown
         } else {
-            return Int(UIInterfaceOrientationMask.All.rawValue)
+            return UIInterfaceOrientationMask.All
         }
     }
 }
